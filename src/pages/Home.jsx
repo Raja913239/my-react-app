@@ -53,7 +53,7 @@ function Home(){
     return(
 
         <div className="home">
-            <form onSubmit={handleSearch} className="Search-form">
+            <form onSubmit={handleSearch} className="search-form">
                 <input 
                 type="text" 
                 placeholder="Search for a movie..." 
@@ -61,14 +61,14 @@ function Home(){
                 value={searchQuery} 
                 onChange={(e) => setSearchQuery(e.target.value)}
                 />
-                <button type="submit" className="search-btn">Search</button>
+                <button type="submit" className="search-button">Search</button>
             </form>
 
             {error && <div className='error-message'>{error}</div>}
             {loading ? (
                 <div className='loading'>Loading....</div>) 
                 : (
-                    <div className="movie-grid">
+                    <div className="movies-grid">
                     {movies.map((movie) => 
                         (<MovieCard movie={movie} key={movie.id} />
                     ))}

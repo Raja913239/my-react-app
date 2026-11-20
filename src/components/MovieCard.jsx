@@ -1,17 +1,19 @@
 import '../css/MovieCard.css';
 import { useMovieContext } from '../contexts/MovieContext';
 
+const IMG_BASE = "https://image.tmdb.org/t/p/w500";
 function MovieCard({movie}){
-    const IMG_BASE = "https://image.tmdb.org/t/p/w500";
 
-    const {isFavorite, removeFavorites, addFavorites} = useMovieContext();
+    const {isFavorite, removeFavorites, addToFavorites} = useMovieContext();
 
     const favorite = isFavorite(movie.id);
 
     function onFavoriteClick(e){
+        
         e.preventDefault()
         if(favorite) removeFavorites(movie.id)
-        else addFavorites(movie)
+
+        else addToFavorites(movie)
     }
 
     return(

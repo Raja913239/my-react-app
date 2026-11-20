@@ -1,0 +1,59 @@
+.movie-card .favorite-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  line-height: 1;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  cursor: pointer;
+}
+
+.movie-card .favorite-btn.active {
+  background: #e50914;
+}
+
+.movie-poster {
+  position: relative;
+}
+
+.movie-poster img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.movie-info {
+  padding: 0.75rem 1rem 1rem;
+}
+
+.movie-info h3 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.movie-info p {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.movie-overlay {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.movie-card:hover .movie-overlay {
+  opacity: 1;
+}
+
+
+.favorite-btn.active {
+  background: #e50914;
+}
